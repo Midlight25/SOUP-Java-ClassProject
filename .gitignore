@@ -24,6 +24,9 @@ hs_err_pid*
 
 # VS Config Files
 .vscode/
+.classpath
+.project
+.settings/
 
 # Maven (from: https://github.com/github/gitignore/blob/master/Maven.gitignore)
 
