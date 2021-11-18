@@ -6,6 +6,11 @@ package com.SOUPcorp.app;
  */
 public class App 
 {
+    /**
+     * Main Function, only prints Hello World at the moment.
+     * 
+     * @param args String arguments from the command line.
+     */
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
