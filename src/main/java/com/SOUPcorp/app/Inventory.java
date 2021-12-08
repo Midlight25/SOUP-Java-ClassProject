@@ -1,3 +1,5 @@
+package com.SOUPcorp.app;
+
 import java.util.*;
 
 public class Inventory implements Iterable<Item> {

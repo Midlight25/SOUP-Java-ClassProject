@@ -1,3 +1,5 @@
+package com.SOUPcorp.app;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -24,9 +26,9 @@ public class LoginGUI {
         pLabel = new JLabel("Password: ");
         pLabel.setPreferredSize(new Dimension(150, 30));
         loginPanel = new JPanel(new GridLayout(2, 2));
-        buttonPanel = new JPanel(new GridLayout(1,4,5,5));
+        buttonPanel = new JPanel(new GridLayout(1, 4, 5, 5));
         panel = new JPanel(new BorderLayout());
-        username.setBounds(15,15,155,55);
+        username.setBounds(15, 15, 155, 55);
         username.setPreferredSize(new Dimension(150, 25));
         password.setPreferredSize(new Dimension(150, 25));
 
@@ -41,7 +43,7 @@ public class LoginGUI {
         buttonPanel.add(loginButton);
         buttonPanel.add(registerBuyerButton);
         panel.add(loginPanel, BorderLayout.NORTH);
-        panel.add(buttonPanel,BorderLayout.SOUTH );
+        panel.add(buttonPanel, BorderLayout.SOUTH);
 
         panel.setBorder(BorderFactory.createTitledBorder("Login"));
 
@@ -62,13 +64,11 @@ public class LoginGUI {
                     JOptionPane.showMessageDialog(null, "Invalid Login. Try again!");
                     username.setText("");
                     password.setText("");
-                }
-                else if (userType.equals("Seller")) {
+                } else if (userType.equals("Seller")) {
                     frame.dispose();
                     Seller seller = new Seller(usernameText, passwordText);
                     SellerGUI sellerGUI = new SellerGUI(seller);
-                }
-                else {
+                } else {
                     frame.dispose();
                     Buyer buyer = new Buyer(usernameText, passwordText);
                     ProductsGUI productsGUI = new ProductsGUI(buyer);
@@ -88,10 +88,5 @@ public class LoginGUI {
                 }
             }
         });
-    }
-
-    public static void main(String[] args)
-    {
-        LoginGUI GUI = new LoginGUI();
     }
 }

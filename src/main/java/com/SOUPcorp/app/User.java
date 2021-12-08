@@ -1,3 +1,5 @@
+package com.SOUPcorp.app;
+
 import java.io.FileNotFoundException;
 
 public abstract class User {
@@ -17,10 +19,14 @@ public abstract class User {
     }
 
     public abstract String getUsername();
+
     public abstract String getPassword();
+
     public abstract String getUserType();
 
     public abstract void setUsername(String username);
+
     public abstract void setPassword(String password);
+
     public abstract void setUserType();
 }

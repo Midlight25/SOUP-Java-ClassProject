@@ -1,3 +1,5 @@
+package com.SOUPcorp.app;
+
 public class Seller extends User {
     Inventory inventory;
     private double revenue;

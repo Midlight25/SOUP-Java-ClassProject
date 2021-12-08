@@ -1,3 +1,5 @@
+package com.SOUPcorp.app;
+
 public class Buyer extends User {
     private ShoppingCart shoppingCart;
 

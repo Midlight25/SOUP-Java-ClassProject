@@ -1,3 +1,5 @@
+package com.SOUPcorp.app;
+
 public class Product implements Item {
     private String name;
     private double price;
