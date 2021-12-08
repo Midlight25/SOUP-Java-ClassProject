@@ -16,9 +16,12 @@ public class FirstTimeSetup {
 			final URI fileURI = fileURL.toURI();
 			File jarFile = new File(fileURI);
 			String parentDir = jarFile.getParent();
+			System.out.println(parentDir);
 
 		} catch (URISyntaxException exception) {
 			System.err.println("URI Syntax Exception: " + exception.getMessage());
+			System.err.println("Path to executable could not be resolved to URI, please move executable " +
+			" to a different location and try again.");
 			System.exit(1);
 		}
 
