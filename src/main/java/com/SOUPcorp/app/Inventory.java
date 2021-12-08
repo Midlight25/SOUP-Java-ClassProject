@@ -12,8 +12,6 @@ public class Inventory implements Iterable<Item> {
 
         for (String productStr : products) {
             String[] split = productStr.split("\\s+");
-            System.out.println(split);
-            System.out.println(split.length);
             String name = split[0];
             double price = Double.parseDouble(split[1]);
             Product product = new Product(name, price);
