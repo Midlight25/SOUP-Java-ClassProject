@@ -112,13 +112,12 @@ class ReviewCartTable extends AbstractTableModel {
         int i = 0;
         for (Item it : cart.getItems().keySet()) {
             if (i == rowIndex) {
-                switch (columnIndex) {
-                    case 0:
-                        val = it.getName();
-                        break;
-                    case 1:
-                        val = cart.getItems().get(it);
-                        break;
+                if (columnIndex == 0) {
+                    val = it.getName();
+                }
+                else {
+                    val = cart.getItems().get(it);
+                    break;
                 }
             }
             i++;

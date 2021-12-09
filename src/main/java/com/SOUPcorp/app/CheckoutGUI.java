@@ -12,9 +12,9 @@ public class CheckoutGUI extends JFrame {
     private JLabel nameLabel;
     private JLabel ccInfoLabel;
     private JLabel costLabel;
+    private JButton orderB;
     private JTextField nameText;
     private JTextField ccInfoText;
-    private JButton orderB;
 
     /**
      * CheckoutGUI constructor

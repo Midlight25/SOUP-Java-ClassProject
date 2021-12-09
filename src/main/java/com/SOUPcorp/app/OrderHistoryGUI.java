@@ -111,16 +111,17 @@ class OrderHistoryTable extends AbstractTableModel {
         for (String order : orderHistory) {
             String[] split = order.split("\\s+");
             if (i == rowIndex) {
-                switch (columnIndex) {
-                    case 0:
-                        val = split[0];
-                        break;
-                    case 1:
-                        val = split[1];
-                        break;
-                    case 2:
-                        val = split[2];
-                        break;
+                if (columnIndex == 0) {
+                    val = split[0];
+                    break;
+                }
+                else if (columnIndex == 1) {
+                    val = split[1];
+                    break;
+                }
+                else {
+                    val = split[2];
+                    break;
                 }
             }
             i++;

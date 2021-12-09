@@ -15,10 +15,10 @@ public class SellerGUI extends JFrame {
     private JPanel panel;
     private JLabel productName;
     private JLabel productQuantity;
-    private JTextField productNameText;
-    private JTextField productQuantityText;
     private JButton updateButton;
     private JButton ordersButton;
+    private JTextField productNameText;
+    private JTextField productQuantityText;
     private JTable table;
 
     /**
@@ -145,16 +145,17 @@ class SellerTable extends AbstractTableModel {
         int i = 0;
         for (Item it : products.keySet()) {
             if (i == rowIndex) {
-                switch (columnIndex) {
-                    case 0:
-                        val = it.getName();
-                        break;
-                    case 1:
-                        val = products.get(it);
-                        break;
-                    case 2:
-                        val = it.getPrice();
-                        break;
+                if (columnIndex == 0) {
+                    val = it.getName();
+                    break;
+                }
+                else if (columnIndex == 1) {
+                    val = products.get(it);
+                    break;
+                }
+                else {
+                    val = it.getPrice();
+                    break;
                 }
             }
             i++;
