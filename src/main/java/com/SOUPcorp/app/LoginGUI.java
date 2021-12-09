@@ -7,24 +7,24 @@ import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 
 public class LoginGUI {
-    private JTextField username;
-    private JTextField password;
-    private JLabel uLabel;
-    private JLabel pLabel;
     private JPanel loginPanel;
     private JPanel buttonPanel;
     private JPanel panel;
+    private JLabel usernameLabel;
+    private JLabel passwordLabel;
     private JButton loginButton;
     private JButton registerBuyerButton;
+    private JTextField username;
+    private JTextField password;
 
     public LoginGUI() {
         username = new JTextField("", 20);
         username.setSize(5, 2);
         password = new JTextField("", 20);
-        uLabel = new JLabel("Username: ");
-        uLabel.setPreferredSize(new Dimension(150, 30));
-        pLabel = new JLabel("Password: ");
-        pLabel.setPreferredSize(new Dimension(150, 30));
+        usernameLabel = new JLabel("Username: ");
+        usernameLabel.setPreferredSize(new Dimension(150, 30));
+        passwordLabel = new JLabel("Password: ");
+        passwordLabel.setPreferredSize(new Dimension(150, 30));
         loginPanel = new JPanel(new GridLayout(2, 2));
         buttonPanel = new JPanel(new GridLayout(1, 4, 5, 5));
         panel = new JPanel(new BorderLayout());
@@ -32,9 +32,9 @@ public class LoginGUI {
         username.setPreferredSize(new Dimension(150, 25));
         password.setPreferredSize(new Dimension(150, 25));
 
-        loginPanel.add(uLabel);
+        loginPanel.add(usernameLabel);
         loginPanel.add(username);
-        loginPanel.add(pLabel);
+        loginPanel.add(passwordLabel);
         loginPanel.add(password);
 
         loginButton = new JButton("Login");
