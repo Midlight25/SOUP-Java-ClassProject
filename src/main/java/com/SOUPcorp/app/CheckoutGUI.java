@@ -16,6 +16,10 @@ public class CheckoutGUI extends JFrame {
     private JTextField ccInfoText;
     private JButton orderB;
 
+    /**
+     * CheckoutGUI constructor
+     * @param buyer Currently logged in Buyer
+     */
     public CheckoutGUI(Buyer buyer) {
         double totalCost = ((Buyer) buyer).getShoppingCart().findTotalPrice();
 

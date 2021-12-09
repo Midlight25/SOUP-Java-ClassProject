@@ -16,6 +16,10 @@ public class OrderHistoryGUI extends JFrame {
     private JPanel panel;
     private JButton backButton;
 
+    /**
+     * OrderHistoryGUI constructor
+     * @param seller Currently logged in Seller
+     */
     public OrderHistoryGUI(Seller seller) {
         tablePanel = new JPanel(new GridLayout(1, 0));
         buttonPanel = new JPanel(new GridLayout(1, 3,5,5));
@@ -57,25 +61,48 @@ class OrderHistoryTable extends AbstractTableModel {
     ArrayList<String> orderHistory;
     Seller seller;
 
+    /**
+     * OrderHistoryTable constructor
+     * @param s Currently logged in Seller
+     */
     public OrderHistoryTable(Seller s) {
         seller = s;
         orderHistory = ShopSystem.getInstance().fetchOrderHistory();
     }
 
+    /**
+     * rowCount getter
+     * @return int Number of rows in table model
+     */
     @Override
     public int getRowCount() {
         return orderHistory.size();
     }
 
+    /**
+     * columnCount getter
+     * @return int Number of columns in table model
+     */
     @Override
     public int getColumnCount() {
         return columnNames.length;
     }
 
-    public String getColumnName(int col) {
-        return columnNames[col];
+    /**
+     * columnName getter
+     * @param column Index of column
+     * @return String Name of column
+     */
+    public String getColumnName(int column) {
+        return columnNames[column];
     }
 
+    /**
+     * valueAtIndex getter
+     * @param rowIndex Current Row
+     * @param columnIndex Current Column
+     * @return Object Value at row and column
+     */
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Object val = null;
@@ -101,6 +128,11 @@ class OrderHistoryTable extends AbstractTableModel {
         return val;
     }
 
+    /**
+     * columnClass getter
+     * @param c Column index
+     * @return Class Class of value
+     */
     public Class getColumnClass(int c) {
         return getValueAt(0, c).getClass();
     }

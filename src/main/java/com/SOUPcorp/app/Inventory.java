@@ -6,6 +6,9 @@ public class Inventory implements Iterable<Item> {
     private Map<Item, Integer> items;
     ArrayList<String> products;
 
+    /**
+     * Inventory constructor (adds and saves products)
+     */
     public Inventory() {
         items = new HashMap<Item, Integer>();
         products = ShopSystem.fetchProducts();
@@ -20,15 +23,28 @@ public class Inventory implements Iterable<Item> {
         }
     }
 
+    /**
+     * Updates quantity of item in inventory
+     * @param item Item to be updated
+     * @param newQuantity New quantity of item
+     */
     public void updateQuantity(Item item, Integer newQuantity) {
         items.replace(item, newQuantity);
         ShopSystem.getInstance().updateProducts(item.getName(), newQuantity);
     }
 
+    /**
+     * inventory getter
+     * @return Map items and their quantity
+     */
     public Map<Item, Integer> getInventory() {
         return items;
     }
 
+    /**
+     * Iterator over inventory
+     * @return iterator
+     */
     public Iterator<Item> iterator() {
         return null;
     }

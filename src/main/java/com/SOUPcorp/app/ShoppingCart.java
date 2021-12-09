@@ -7,14 +7,26 @@ import java.util.Map;
 public class ShoppingCart {
     private Map<Item, Integer> items;
 
+    /**
+     * ShoppingCart constructor
+     */
     public ShoppingCart() {
         items = new HashMap<Item, Integer>();
     }
 
+    /**
+     * adds item to shopping cart
+     * @param item Item to add
+     * @param quantity Quantity of item to add
+     */
     public void addCartItem(Item item, int quantity) {
         items.put(item, quantity);
     }
 
+    /**
+     * finds price of individual each item in shopping cart
+     * @return ArrayList prices
+     */
     public ArrayList<Double> findEachPrice() {
         ArrayList<Double> prices = new ArrayList<Double>();
 
@@ -27,6 +39,10 @@ public class ShoppingCart {
         return prices;
     }
 
+    /**
+     * finds total price of all items in shopping cart
+     * @return double total
+     */
     public double findTotalPrice() {
         double total = 0.0;
 
@@ -38,6 +54,10 @@ public class ShoppingCart {
         return total;
     }
 
+    /**
+     * items getter
+     * @return Map items
+     */
     public Map<Item, Integer> getItems() {
         return items;
     }

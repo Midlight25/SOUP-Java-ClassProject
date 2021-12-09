@@ -66,11 +66,11 @@ public class LoginGUI {
                     password.setText("");
                 } else if (userType.equals("Seller")) {
                     frame.dispose();
-                    Seller seller = new Seller(usernameText, passwordText);
+                    Seller seller = new Seller();
                     SellerGUI sellerGUI = new SellerGUI(seller);
                 } else {
                     frame.dispose();
-                    Buyer buyer = new Buyer(usernameText, passwordText);
+                    Buyer buyer = new Buyer();
                     ProductsGUI productsGUI = new ProductsGUI(buyer);
                 }
             }
@@ -79,7 +79,6 @@ public class LoginGUI {
         registerBuyerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                User buyer = new Buyer();
                 String userInfo = username.getText() + " " + password.getText() + " Buyer";
                 try {
                     ShopSystem.getInstance().addUser(userInfo);

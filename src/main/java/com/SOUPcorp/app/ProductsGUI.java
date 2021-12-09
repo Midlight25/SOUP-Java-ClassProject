@@ -19,6 +19,10 @@ public class ProductsGUI extends JFrame {
     private JButton addButton;
     private JButton reviewButton;
 
+    /**
+     * ProductsGUI constructor
+     * @param buyer Currently logged in Buyer
+     */
     public ProductsGUI(User buyer) {
         tablePanel = new JPanel(new GridLayout(1, 0));
         textPanel = new JPanel(new GridLayout(5, 2));
@@ -98,25 +102,48 @@ class ProductsTable extends AbstractTableModel {
     Map<Item, Integer> products;
     Buyer buyer;
 
+    /**
+     * ProductsTable constructor
+     * @param b Currently logged in Buyer
+     */
     public ProductsTable(Buyer b) {
         buyer = b;
         products = ShopSystem.getInstance().fetchInventory();
     }
 
+    /**
+     * rowCount getter
+     * @return int Number of rows in table model
+     */
     @Override
     public int getRowCount() {
         return products.size();
     }
 
+    /**
+     * columnCount getter
+     * @return int Number of columns in table model
+     */
     @Override
     public int getColumnCount() {
         return columnNames.length;
     }
 
-    public String getColumnName(int col) {
-        return columnNames[col];
+    /**
+     * columnName getter
+     * @param column Index of column
+     * @return String Name of column
+     */
+    public String getColumnName(int column) {
+        return columnNames[column];
     }
 
+    /**
+     * valueAtIndex getter
+     * @param rowIndex Current Row
+     * @param columnIndex Current Column
+     * @return Object Value at row and column
+     */
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         Object val = null;
@@ -141,6 +168,11 @@ class ProductsTable extends AbstractTableModel {
         return val;
     }
 
+    /**
+     * columnClass getter
+     * @param c Column index
+     * @return Class Class of value
+     */
     public Class getColumnClass(int c) {
         return getValueAt(0, c).getClass();
     }

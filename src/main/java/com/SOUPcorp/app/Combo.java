@@ -7,20 +7,35 @@ public class Combo implements Item {
     private String name;
     private Double price;
 
+    /**
+     * Combo constructor
+     */
     public Combo() {
         items = new ArrayList<Item>();
     }
 
+    /**
+     * price getter
+     * @return Double price
+     */
     @Override
     public double getPrice() {
         return price;
     }
 
+    /**
+     * name getter
+     * @return String name
+     */
     @Override
     public String getName() {
         return name;
     }
 
+    /**
+     * Combo toString
+     * @return String s List of items in combo
+     */
     @Override
     public String toString() {
         String s = "";
