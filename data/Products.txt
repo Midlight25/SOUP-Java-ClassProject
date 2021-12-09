@@ -1,3 +1,0 @@
-TomatoSoup 5.00 100
-ChickenSoup 5.00 100
-VegetableSoup 3.00 100
