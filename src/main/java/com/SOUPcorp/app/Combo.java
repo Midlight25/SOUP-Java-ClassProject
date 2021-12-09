@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Combo implements Item {
     private ArrayList<Item> items;
     private String name;
-    private Double price;
+    private double price;
 
     /**
      * Combo constructor
