@@ -1,7 +1,7 @@
 package com.SOUPcorp.app;
 
 /**
- * Hello world!
+ * Main Application Class, program starts here.
  *
  */
 public class App {

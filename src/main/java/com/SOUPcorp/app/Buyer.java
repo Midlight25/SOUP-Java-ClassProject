@@ -1,5 +1,8 @@
 package com.SOUPcorp.app;
 
+/**
+ * Representation for a buyer in the shop system. Extends the user superclass.
+ */
 public class Buyer extends User {
     private ShoppingCart shoppingCart;
 
