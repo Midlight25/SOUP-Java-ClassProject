@@ -46,33 +46,47 @@ public class Inventory implements Iterable<Item> {
      * @return iterator
      */
     public Iterator<Item> iterator() {
-        return null;
+        return new ItemIterator();
     }
 
-    /*
     private class ItemIterator implements Iterator<Item> {
         private int i;
 
+        /**
+         * ItemIterator constructor
+         */
         public ItemIterator() {
             i = 0;
         }
 
+        /**
+         * gets next element
+         * @return Item item
+         */
+        @Override
+        public Item next() {
+            ArrayList<Item> arrayItems = new ArrayList<Item>(items.keySet());
+            Item item = arrayItems.get(i);
+            i++;
+            return item;
+        }
+
+        /**
+         * if more elements to iterate over, return true
+         * @return boolean
+         */
         @Override
         public boolean hasNext() {
             return i < items.size();
         }
 
-        @Override
-        public Item next() {
-            Item item = items.keySet().toArray()[i];
-            i++;
-            return item;
-        }
-
+        /**
+         * removes element
+         */
         @Override
         public void remove() {
             items.remove(i);
         }
     }
-     */
+
 }
