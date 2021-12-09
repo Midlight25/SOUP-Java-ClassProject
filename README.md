@@ -13,3 +13,4 @@ A class project for Object Oriented Design, by designing a desktop application f
 - `mvn test` - Run JUnit4 tests.
 - `mvn site` - Compile Maven Project Details and Javadoc to project website in target/site folder.
 - `java -cp target/classes com.SOUPcorp.app.App` - run class files from compilation step.
+- `java -jar target/SOUP-Java-ClassProject-1.0.jar` - run the jar executable from the packaging step.
