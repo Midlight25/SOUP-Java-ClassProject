@@ -69,7 +69,7 @@ public class FirstTimeSetup {
 				System.out.println("Created UserInfo.txt");
 
 				FileWriter userInfoWriter = new FileWriter(userInfoFile);
-				userInfoWriter.write("darius test Seller");
+				userInfoWriter.write("darius test Seller\n");
 				userInfoWriter.close();
 			} else {
 				System.out.println("Skipping UserInfo.txt, it already exists");
